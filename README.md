@@ -26,13 +26,15 @@ My personal space for learning **JDBC (Java Database Connectivity)** with Java, 
    CREATE DATABASE jdbcLearning;
    USE jdbcLearning;
    CREATE TABLE studentInfo (
-     id INT PRIMARY KEY,
-     sname VARCHAR(50),
-     sage INT,
-     scity VARCHAR(50)
+     id INT NOT NULL PRIMARY KEY,
+     sname VARCHAR(40) NOT NULL,
+     sage INT NOT NULL,
+     scity VARCHAR(40) NOT NULL
    );
    ```
 4. MySQL Connector/J jar added to the Eclipse build path as a User Library (e.g. `My SQL Lib`)
+
+Full schema is also saved in `schema.sql` — run it with `mysql -u root -p < schema.sql`.
 
 > Note: the `jdbc connectors (jar)/` folder with the driver binaries is kept locally only and is **not** tracked in git (see `.gitignore`). Download Connector/J from the [MySQL official site](https://dev.mysql.com/downloads/connector/j/) if you clone this repo.
 
