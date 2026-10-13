@@ -67,6 +67,10 @@ Expected output on success:
 - [ ] Transactions, batch updates
 - [ ] Basic DAO pattern
 
+## My notes
+
+My OneNote study notes for JDBC: [Java Database Connectivity — OneNote](https://onedrive.live.com/personal/ada9593e90035ffd/_layouts/15/Doc.aspx?sourcedoc={40e4b476-28fc-4417-8658-993c6e3f9509}&action=view&redeem=aHR0cHM6Ly8xZHJ2Lm1zL28vYy9hZGE5NTkzZTkwMDM1ZmZkL0lnQjJ0T1JBX0NnWFJJWlltVHh1UDVVSkFTS3l4cjlCUFg1NkhSM0tiVkRQTWdN&wd=target%28New%20Section%201.one%7C471ab3cd-276f-144c-90a9-1d9953c70442%2FJava%20Database%20Connectivity%7C40a3075e-3768-f64d-9cb0-4d4d8919d0fc%2F%29&wdorigin=NavigationUrl)
+
 ## Project structure
 
 ```text
@@ -75,6 +79,7 @@ Expected output on success:
 │   └── src/
 │       └── me/geetprince/jdbc/
 │           └── LaunchApp1.java
+├── schema.sql
 ├── .gitignore
 └── README.md
 ```
