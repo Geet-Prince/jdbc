@@ -1,0 +1,15 @@
+# Eclipse workspace + Java
+.metadata/
+bin/
+*/bin/
+*.class
+.settings/
+*.log
+
+# macOS
+.DS_Store
+
+# MySQL Connector/J - download separately, don't version the binaries/source dump
+*.jar
+*.zip
+/jdbc connectors (jar)/
