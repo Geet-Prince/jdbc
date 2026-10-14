@@ -17,7 +17,13 @@ public class LaunchApp1 {
 		Statement statement = connect.createStatement();
 		
 		// Step 4: Execute the query 
-		String sql="Insert into studentInfo(id,sname,sage,scity )values(1,'Prince',21,'Nalanda')";
+		String sql = "INSERT INTO studentInfo (id, sname, sage, scity)\n"
+		        + "VALUES\n"
+		        + "(6, 'Prince Raj', 21, 'Nalanda'),\n"
+		        + "(2, 'Rahul', 22, 'Patna'),\n"
+		        + "(3, 'Aman', 20, 'Delhi'),\n"
+		        + "(4, 'Priya', 21, 'Noida'),\n"
+		        + "(5, 'Neha', 22, 'Greater Noida')";
 		int row_affected= statement.executeUpdate(sql);
 		// step 5: Process the result
 		
