@@ -13,10 +13,11 @@ public class LaunchApp3 {
 		
 		Statement statement=connect.createStatement();
 		String sql="select * from studentInfo";
-		ResultSet rs=statement.executeQuery(sql);
+		ResultSet rs=statement.executeQuery(sql);//executeQuery is used in non select statements
 		
 		while(rs.next()) {
-			System.out.println( rs.getInt(1)+" "+ rs.getString(2)+" "+rs.getInt(3)+" "+rs.getString(4));
+			// System.out.println( rs.getInt(1)+" "+ rs.getString(2)+" "+rs.getInt(3)+" "+rs.getString(4));
+			System.out.println( rs.getInt("id")+" "+ rs.getString("sname")+" "+rs.getInt("sage")+" "+rs.getString("scity"));
 		}
 		
 		
