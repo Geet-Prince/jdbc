@@ -8,19 +8,19 @@ import java.sql.Statement;
 
 public class LaunchApp5 {
 
-	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection connect=null;
+		Statement statement =null;
+		try {
+			connect =jdbcUtil.getConnection(); 
 		
 		
-		String url="jdbc:mysql://127.0.0.1:3306/jdbcLearning";
-		String name="root";
-		String pass="825218";
-		Connection connect = DriverManager.getConnection(url, name, pass);
 		
-		Statement statement = connect.createStatement();
 		
-		String sql="update studentInfo set scity='Bihar sharif' where id=1";
+		 statement = connect.createStatement();
+		
+		String sql="update studentInfo set scity='Bihar sharif bihar' where id=1";
 		
 		boolean status=statement.execute(sql);
 		
@@ -35,7 +35,7 @@ public class LaunchApp5 {
 			 }
 		}
 		
-		
+		 
 		
 		else {
 			//nsert, update,delete
@@ -54,8 +54,23 @@ public class LaunchApp5 {
 		
 		
 		
-		statement.close();
-		connect.close(); 
+		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch(Exception e) {
+			e.printStackTrace(); 
+		}
+		finally {
+			try {
+				jdbcUtil.closeConnection(connect, statement);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
 		
 	}
 
